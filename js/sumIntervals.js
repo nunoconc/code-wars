@@ -18,12 +18,13 @@ function sumIntervals(intervals) {
             const max2 = intervals[j][1];
             let remove = false;
 
-            if(max2 > max1) {
+
+            if(max1 >= min2 && max1 <= max2) {
                 max1 = max2;
                 remove = true;
             }
 
-            if(min2 < min1) {
+            if(min1 >= min2 && min1 <= max2) {
                 min1 = min2;
                 remove = true;
             }
@@ -41,4 +42,4 @@ function sumIntervals(intervals) {
 }
 
 
-console.log(sumIntervals([[1, 5], [10, 20], [1, 6], [16, 19], [5, 11]])) // 19
+console.log(sumIntervals([[1, 5],[1, 6], [5, 11], [10, 20], [16, 19]])) // 19
