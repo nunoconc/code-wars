@@ -1,11 +1,14 @@
 package org.example;
 
+import java.math.BigInteger;
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
 
 
         System.out.println(
-                ReverseWords.reverseWords("The quick brown fox jumps over the lazy dog.")
+                Arrays.toString(LagrangeFourSquareTheorem.lagrangeFourSquareTheorem(new BigInteger("4093")))
         );
     }
 }
